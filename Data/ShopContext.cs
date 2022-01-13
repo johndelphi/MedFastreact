@@ -13,6 +13,11 @@ namespace MedFastreact.Data
             {
 }
 public DbSet<Shops> Shops { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            //optionsBuilder.UseSqlServer("server =.; Database=MEDfastAPI; Intergrated Security=True");
+            //base.OnConfiguring(optionsBuilder);
+        }
 
     }
 }
