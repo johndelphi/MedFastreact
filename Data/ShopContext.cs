@@ -12,12 +12,12 @@ namespace MedFastreact.Data
         public ShopContext(DbContextOptions<ShopContext> options): base(options)
             {
 }
-public DbSet<Shops> Shops { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
+        public DbSet<Shops> Shop { get; set; } = null!;
+//protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
             //optionsBuilder.UseSqlServer("server =.; Database=MEDfastAPI; Intergrated Security=True");
             //base.OnConfiguring(optionsBuilder);
-        }
+        //}
 
     }
 }
